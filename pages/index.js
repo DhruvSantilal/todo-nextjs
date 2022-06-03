@@ -47,21 +47,20 @@ const Home = () => {
   return (
     <div className="w-3/4 mx-auto">
       <div className="pt-12">
-        <h6 className="mb-2 text-xs font-bold uppercase">Learning React</h6>
-        <h1 className="text-4xl">Todo App</h1>
+        <h1 className="text-9xl">Todo App</h1>
       </div>
 
       <div className="pt-12">
         <input
           type="text"
           value={todoItem}
-          className="w-full rounded py-2 px-4 text-gray-900"
+          className="w-full rounded py-2 px-6 text-gray-900"
           onChange={(e) => setTodoItem(e.target.value)}
           onKeyDown={handleEnter}
         />
       </div>
 
-      <ul className="pt-12">
+      <ul className="pt-12 text-xl">
         {items
           .filter(({ done }) => !done)
           .map(({ id, message }) => (
